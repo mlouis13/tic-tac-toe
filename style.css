@@ -25,9 +25,7 @@ dialog::backdrop {
 .white {
 	background-color: var(--silver);
 }
-.black {
-	background-color: var(--Darknavy);
-}
+
 .button {
 	background-color: var(--Darknavy);
 	width: 100%;
