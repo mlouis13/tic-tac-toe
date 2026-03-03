@@ -1,5 +1,5 @@
 body {
-	background-color: var(--Darknavy);
+	background-color: var(--darknavy);
 	padding: 24px;
 	display: flex;
 	flex-direction: column;
@@ -11,23 +11,25 @@ body {
 	gap: 12px;
 }
 dialog {
-	background-color: var(--Darknavy);
+	background-color: var(--darknavy);
 	border: 0;
 }
 dialog::backdrop {
-	background-color: var(--Darknavy);
+	background-color: var(--darknavy);
 }
 .choice {
 	background-color: var(--semiDarknavy);
 	padding: 24px 12px;
 	border-radius: 12px;
 }
-.white {
+.white-background {
 	background-color: var(--silver);
 }
-
+.black-background {
+	background-color: var(--darknavy);
+}
 .button {
-	background-color: var(--Darknavy);
+	background-color: var(--darknavy);
 	width: 100%;
 	display: flex;
 	padding: 12px;
@@ -46,4 +48,10 @@ section {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
+}
+.blue-text {
+	color: var(--darknavy);
+}
+.silver-text {
+	color: var(--silver);
 }

@@ -3,23 +3,31 @@ dialog.showModal();
 const croix = document.querySelector("#croix");
 const rond = document.querySelector("#rond");
 const Form = document.querySelector("form");
-const O = document.querySelector("O");
-const X = document.querySelector("X");
-rond.classList.add("white");
-croix.classList.remove("white");
 
+rond.classList.add("white-background");
+rond.classList.add("blue-text");
+croix.classList.add("black-background");
+croix.classList.add("silver-text");
 Form.addEventListener("submit", (e) => {
 	e.preventDefault();
 });
 croix.addEventListener("click", () => {
-	rond.classList.add("white");
-	croix.classList.remove("white");
-	X.style.fill = "#1a2a33";
-	O.style.fill = "#a8bfc9";
+	croix.classList.remove("black-background");
+	croix.classList.remove("silver-text");
+	rond.classList.remove("white-background");
+	rond.classList.remove("blue-text");
+	croix.classList.add("white-background");
+	croix.classList.add("blue-text");
+	rond.classList.add("black-background");
+	rond.classList.add("silver-text");
 });
 rond.addEventListener("click", () => {
-	croix.classList.add("white");
-	rond.classList.remove("white");
-	X.style.fill = "#a8bfc9";
-	O.style.fill = "#1a2a33";
+	rond.classList.remove("black-background");
+	rond.classList.remove("silver-text");
+	croix.classList.remove("white-background");
+	croix.classList.remove("silver-text");
+	rond.classList.add("white-background");
+	rond.classList.add("blue-text");
+	croix.classList.add("black-background");
+	croix.classList.add("silver-text");
 });
