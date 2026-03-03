@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const croix = document.querySelector("#croix");
 const rond = document.querySelector("#rond");
 const Form = document.querySelector("form");
-
+const span = document.querySelector("span");
+span.textContent = "O";
 rond.classList.add("white-background");
 rond.classList.add("blue-text");
 croix.classList.add("black-background");
@@ -23,6 +24,7 @@ croix.addEventListener("click", () => {
 	croix.classList.add("blue-text");
 	rond.classList.add("black-background");
 	rond.classList.add("silver-text");
+	span.textContent = "X";
 });
 rond.addEventListener("click", () => {
 	rond.classList.remove("black-background");
@@ -33,4 +35,5 @@ rond.addEventListener("click", () => {
 	rond.classList.add("blue-text");
 	croix.classList.add("black-background");
 	croix.classList.add("silver-text");
+	span.textContent = "O";
 });
