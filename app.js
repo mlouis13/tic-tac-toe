@@ -6,6 +6,9 @@ const croix = document.querySelector("#croix");
 const rond = document.querySelector("#rond");
 const Form = document.querySelector("form");
 const span = document.querySelector("span");
+const reset = document.querySelector("#reset");
+const restart = document.querySelector("#restart");
+const no = document.querySelector("#no");
 span.textContent = "O";
 rond.classList.add("white-background");
 rond.classList.add("blue-text");
@@ -36,4 +39,10 @@ rond.addEventListener("click", () => {
 	croix.classList.add("black-background");
 	croix.classList.add("silver-text");
 	span.textContent = "O";
+});
+reset.addEventListener("click", () => {
+	restart.showModal();
+});
+no.addEventListener("click", () => {
+	restart.close();
 });
