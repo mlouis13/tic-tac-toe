@@ -1,5 +1,7 @@
 const dialog = document.querySelector("dialog");
-dialog.showModal();
+document.addEventListener("DOMContentLoaded", () => {
+	dialog.showModal();
+});
 const croix = document.querySelector("#croix");
 const rond = document.querySelector("#rond");
 const Form = document.querySelector("form");
@@ -10,6 +12,7 @@ croix.classList.add("black-background");
 croix.classList.add("silver-text");
 Form.addEventListener("submit", (e) => {
 	e.preventDefault();
+	dialog.close();
 });
 croix.addEventListener("click", () => {
 	croix.classList.remove("black-background");

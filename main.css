@@ -4,4 +4,23 @@
 	--silver: #a8bfc9;
 	--lightblue: #31c3bd;
 	--lightyellow: #f2b137;
+	--outfit: "Outfit", sans-serif;
+}
+* {
+	font-family: var(--outfit);
+}
+h3 {
+	font-weight: 700;
+	font-size: 16px;
+	color: var(--silver);
+	letter-spacing: 1px;
+	text-align: center;
+}
+h4 {
+	font-weight: 400;
+	font-size: 14px;
+	color: var(--silver);
+	line-height: 100%;
+	letter-spacing: 0.88px;
+	text-align: center;
 }
