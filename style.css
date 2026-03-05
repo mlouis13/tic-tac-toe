@@ -131,7 +131,11 @@ nav {
 	box-shadow: 0px -8px 0px 0px #10212a inset;
 	border: none;
 	border-radius: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 .restart {
 	background-color: var(--semiDarknavy);
 	border: none;
@@ -139,9 +143,33 @@ nav {
 main {
 	padding: 24px;
 }
-.croixx {
-	background: center / cover url(assets/Combined\ Shape\ Copy\ 2\ \(1\).svg);
+.nombre {
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: 1px;
+	text-align: center;
+	color: var(--darknavy);
 }
-.rondd {
-	background: center / cover url(assets/Oval.svg);
+.blueinfo,
+.grisinfo,
+.yellowinfo {
+	width: 30%;
+	height: 12vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 12px;
+}
+.blueinfo {
+	background-color: var(--lightblue);
+}
+.grisinfo {
+	background-color: var(--silver);
+}
+.yellowinfo {
+	background-color: var(--lightyellow);
+}
+.info {
+	display: flex;
+	justify-content: space-between;
 }

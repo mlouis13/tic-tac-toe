@@ -13,6 +13,7 @@ const span2 = document.querySelector("#difference2");
 const morpions = document.querySelectorAll("#morpion");
 const yes = document.querySelector("#yes");
 let joueur = "O";
+const grille = ["", "", "", "", "", "", "", "", ""];
 span.textContent = "O";
 rond.classList.add("white-background");
 rond.classList.add("blue-text");
@@ -57,14 +58,27 @@ no.addEventListener("click", () => {
 for (let i = 0; i < morpions.length; i++) {
 	const info = morpions[i];
 	info.addEventListener("click", () => {
+		if (grille[i] !== "") {
+			return;
+		}
 		console.log(i);
 
 		if (joueur == "X") {
-			info.classList.add("croixx");
+			info.innerHTML = `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M62.5838 10.4906L52.9719 0.87868C51.8003 -0.292893 49.9008 -0.292893 48.7293 0.87868L31.7313 17.8767L14.7333 0.87868C13.5617 -0.292893 11.6622 -0.292893 10.4906 0.87868L0.87868 10.4906C-0.292893 11.6622 -0.292893 13.5617 0.87868 14.7333L17.8767 31.7313L0.87868 48.7293C-0.292893 49.9008 -0.292893 51.8003 0.87868 52.9719L10.4906 62.5838C11.6622 63.7554 13.5617 63.7554 14.7333 62.5838L31.7313 45.5858L48.7293 62.5838C49.9008 63.7554 51.8003 63.7554 52.9719 62.5838L62.5838 52.9719C63.7554 51.8003 63.7554 49.9008 62.5838 48.7293L45.5858 31.7313L62.5838 14.7333C63.7554 13.5617 63.7554 11.6622 62.5838 10.4906Z" fill="#31C3BD"/>
+</svg>
+`;
+			info.classList.add("hover1");
+			grille[i] = joueur;
 			joueur = "O";
 			span2.textContent = "O";
 		} else if (joueur == "O") {
-			info.classList.add("rondd");
+			info.innerHTML = `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32ZM18.963 32C18.963 24.7998 24.7998 18.963 32 18.963C39.2002 18.963 45.037 24.7998 45.037 32C45.037 39.2002 39.2002 45.037 32 45.037C24.7998 45.037 18.963 39.2002 18.963 32Z" fill="#F2B137"/>
+</svg>
+`;
+			info.classList.add("hover2");
+			grille[i] = joueur;
 			joueur = "X";
 			span2.textContent = "X";
 		}
