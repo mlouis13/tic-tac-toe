@@ -5,10 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const croix = document.querySelector("#croix");
 const rond = document.querySelector("#rond");
 const Form = document.querySelector("form");
-const span = document.querySelector("span");
+const span = document.querySelector("#difference");
 const reset = document.querySelector("#reset");
 const restart = document.querySelector("#restart");
 const no = document.querySelector("#no");
+const span2 = document.querySelector("#difference2");
+const morpions = document.querySelectorAll("#morpion");
+const yes = document.querySelector("#yes");
+let joueur = "O";
 span.textContent = "O";
 rond.classList.add("white-background");
 rond.classList.add("blue-text");
@@ -28,6 +32,8 @@ croix.addEventListener("click", () => {
 	rond.classList.add("black-background");
 	rond.classList.add("silver-text");
 	span.textContent = "X";
+	joueur = "X";
+	span2.textContent = "X";
 });
 rond.addEventListener("click", () => {
 	rond.classList.remove("black-background");
@@ -39,10 +45,32 @@ rond.addEventListener("click", () => {
 	croix.classList.add("black-background");
 	croix.classList.add("silver-text");
 	span.textContent = "O";
+	joueur = "O";
+	span2.textContent = "O";
 });
 reset.addEventListener("click", () => {
 	restart.showModal();
 });
 no.addEventListener("click", () => {
 	restart.close();
+});
+for (let i = 0; i < morpions.length; i++) {
+	const info = morpions[i];
+	info.addEventListener("click", () => {
+		console.log(i);
+
+		if (joueur == "X") {
+			info.classList.add("croixx");
+			joueur = "O";
+			span2.textContent = "O";
+		} else if (joueur == "O") {
+			info.classList.add("rondd");
+			joueur = "X";
+			span2.textContent = "X";
+		}
+	});
+}
+
+yes.addEventListener("click", () => {
+	window.location.href = "index.html";
 });
