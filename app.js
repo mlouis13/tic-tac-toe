@@ -14,7 +14,11 @@ const morpions = document.querySelectorAll("#morpion");
 const yes = document.querySelector("#yes");
 let joueur = "O";
 const grille = ["", "", "", "", "", "", "", "", ""];
+const rondwin = document.querySelector("#rondwin");
+const croixwin = document.querySelector("#croixwin");
+const no2 = document.querySelectorAll("#no2");
 span.textContent = "O";
+span2.textContent = "O";
 rond.classList.add("white-background");
 rond.classList.add("blue-text");
 croix.classList.add("black-background");
@@ -82,9 +86,180 @@ for (let i = 0; i < morpions.length; i++) {
 			joueur = "X";
 			span2.textContent = "X";
 		}
+		if (grille[i] == grille[8]) {
+			if (grille[i] == grille[4] && grille[i] == grille[0]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[2] && grille[i] == grille[5]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[7] && grille[i] == grille[6]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		} else if (grille[i] == grille[4]) {
+			if (grille[i] == grille[0] && grille[i] == grille[8]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[3] && grille[i] == grille[5]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[1] && grille[i] == grille[7]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[2] && grille[i] == grille[6]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		} else if (grille[i] == grille[0]) {
+			if (grille[i] == grille[4] && grille[i] == grille[8]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[1] && grille[i] == grille[2]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[3] && grille[i] == grille[6]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		} else if (grille[i] == grille[1]) {
+			if (grille[i] == grille[4] && grille[i] == grille[7]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[2] && grille[i] == grille[0]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		} else if (grille[i] == grille[2]) {
+			if (grille[i] == grille[5] && grille[i] == grille[8]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[0] && grille[i] == grille[1]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[4] && grille[i] == grille[6]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		} else if (grille[i] == grille[3]) {
+			if (grille[i] == grille[4] && grille[i] == grille[5]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[0] && grille[i] == grille[6]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		} else if (grille[i] == grille[5]) {
+			if (grille[i] == grille[2] && grille[i] == grille[8]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[4] && grille[i] == grille[3]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		} else if (grille[i] == grille[6]) {
+			if (grille[i] == grille[3] && grille[i] == grille[0]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[4] && grille[i] == grille[2]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[7] && grille[i] == grille[8]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		}
+		if (grille[i] == grille[7]) {
+			if (grille[i] == grille[6] && grille[i] == grille[8]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			} else if (grille[i] == grille[1] && grille[i] == grille[4]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+				} else if (joueur == "O") {
+					rondwin.showModal();
+				}
+			}
+		}
 	});
 }
 
 yes.addEventListener("click", () => {
 	window.location.href = "index.html";
 });
+no2.addEventListener("click", () => {
+	window.location.href = "index.html";
+});
+
+// rondwin.showModal();
+
+// croixwin.showModal();
