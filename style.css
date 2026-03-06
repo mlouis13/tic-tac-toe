@@ -174,7 +174,8 @@ main {
 	justify-content: space-between;
 }
 #rondwin,
-#croixwin {
+#croixwin,
+#roundtie {
 	background-color: var(--semiDarknavy);
 	border: none;
 }
@@ -208,4 +209,12 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
+}
+.tied {
+	font-weight: 700;
+	font-size: 24px;
+	color: var(--silver);
+	line-height: 100%;
+	letter-spacing: 1.5px;
+	text-align: center;
 }

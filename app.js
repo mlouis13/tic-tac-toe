@@ -16,7 +16,20 @@ let joueur = "O";
 const grille = ["", "", "", "", "", "", "", "", ""];
 const rondwin = document.querySelector("#rondwin");
 const croixwin = document.querySelector("#croixwin");
-const no2 = document.querySelectorAll("#no2");
+const no2 = document.querySelector("#no2");
+const no3 = document.querySelector("#no3");
+const numberwin = document.querySelector("#numberwin");
+const numbertie = document.querySelector("#numbertie");
+const numberlose = document.querySelector("#numberlose");
+const yes2 = document.querySelector("#yes2");
+const yes3 = document.querySelector("#yes3");
+const roundtie = document.querySelector("#roundtie");
+const yes4 = document.querySelector("#yes4");
+const no4 = document.querySelector("#no4");
+let gagnant = false
+numberwin.textContent = 0;
+numbertie.textContent = 0;
+numberlose.textContent = 0;
 span.textContent = "O";
 span2.textContent = "O";
 rond.classList.add("white-background");
@@ -90,148 +103,195 @@ for (let i = 0; i < morpions.length; i++) {
 			if (grille[i] == grille[4] && grille[i] == grille[0]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[2] && grille[i] == grille[5]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[7] && grille[i] == grille[6]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		} else if (grille[i] == grille[4]) {
 			if (grille[i] == grille[0] && grille[i] == grille[8]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[3] && grille[i] == grille[5]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[1] && grille[i] == grille[7]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[2] && grille[i] == grille[6]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		} else if (grille[i] == grille[0]) {
 			if (grille[i] == grille[4] && grille[i] == grille[8]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[1] && grille[i] == grille[2]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[3] && grille[i] == grille[6]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		} else if (grille[i] == grille[1]) {
 			if (grille[i] == grille[4] && grille[i] == grille[7]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[2] && grille[i] == grille[0]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		} else if (grille[i] == grille[2]) {
 			if (grille[i] == grille[5] && grille[i] == grille[8]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
-			} else if (grille[i] == grille[0] && grille[i] == grille[1]) {
+			}    if (grille[i] == grille[4] && grille[i] == grille[6]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
-				}
-			} else if (grille[i] == grille[4] && grille[i] == grille[6]) {
-				if (joueur == "X") {
-					croixwin.showModal();
-				} else if (joueur == "O") {
-					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		} else if (grille[i] == grille[3]) {
 			if (grille[i] == grille[4] && grille[i] == grille[5]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[0] && grille[i] == grille[6]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		} else if (grille[i] == grille[5]) {
 			if (grille[i] == grille[2] && grille[i] == grille[8]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[4] && grille[i] == grille[3]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		} else if (grille[i] == grille[6]) {
 			if (grille[i] == grille[3] && grille[i] == grille[0]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[4] && grille[i] == grille[2]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[7] && grille[i] == grille[8]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
+				}
+			}
+		}
+		if (grille[i] == grille[2]) {
+			if (grille[i] == grille[0] && grille[i] == grille[1]) {
+				if (joueur == "X") {
+					croixwin.showModal();
+					gagnant = true
+				} else if (joueur == "O") {
+					rondwin.showModal();
+					gagnant = true
 				}
 			}
 		}
@@ -239,16 +299,34 @@ for (let i = 0; i < morpions.length; i++) {
 			if (grille[i] == grille[6] && grille[i] == grille[8]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			} else if (grille[i] == grille[1] && grille[i] == grille[4]) {
 				if (joueur == "X") {
 					croixwin.showModal();
+					gagnant = true
 				} else if (joueur == "O") {
 					rondwin.showModal();
+					gagnant = true
 				}
 			}
+		}
+		if (
+			grille[0] !== "" &&
+			grille[1] !== "" &&
+			grille[2] !== "" &&
+			grille[3] !== "" &&
+			grille[4] !== "" &&
+			grille[5] !== "" &&
+			grille[6] !== "" &&
+			grille[7] !== "" &&
+			grille[8] !== "" &&
+			gagnant !== true
+		) {
+			roundtie.showModal();
 		}
 	});
 }
@@ -259,7 +337,24 @@ yes.addEventListener("click", () => {
 no2.addEventListener("click", () => {
 	window.location.href = "index.html";
 });
-
+no3.addEventListener("click", () => {
+	window.location.href = "index.html";
+});
+yes2.addEventListener("click", () => {
+	numberwin.textContent = +1;
+	rondwin.close();
+});
+yes3.addEventListener("click", () => {
+	numberlose.textContent = +1;
+	croixwin.close();
+});
+yes4.addEventListener("click", () => {
+	numbertie.textContent = +1;
+	roundtie.close();
+});
+no4.addEventListener("click", () => {
+	window.location.href = "index.html";
+});
 // rondwin.showModal();
 
 // croixwin.showModal();

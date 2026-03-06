@@ -123,7 +123,7 @@
 				</div>
 				<div class="align2">
 					<button class="no" id="no2">QUIT</button>
-					<button class="yes">NEXT ROUND</button>
+					<button class="yes" id="yes2">NEXT ROUND</button>
 				</div>
 			</article>
 		</dialog>
@@ -148,8 +148,20 @@
 					<p class="yelloww">TAKES THE ROUND</p>
 				</div>
 				<div class="align2">
-					<button class="no" id="no2">QUIT</button>
-					<button class="yes">NEXT ROUND</button>
+					<button class="no" id="no3">QUIT</button>
+					<button class="yes" id="yes3">NEXT ROUND</button>
+				</div>
+			</article>
+		</dialog>
+		<dialog id="roundtie">
+			<article class="chiant">
+				<h4>BRUH...</h4>
+				<div class="align">
+					<p class="tied">ROUND TIED</p>
+				</div>
+				<div class="align2">
+					<button class="no" id="no4">QUIT</button>
+					<button class="yes" id="yes4">NEXT ROUND</button>
 				</div>
 			</article>
 		</dialog>
@@ -218,16 +230,16 @@
 			</section>
 			<section class="info">
 				<div class="blueinfo">
-					<h5>X (P2)</h5>
-					<p class="nombre">14</p>
+					<h5>X</h5>
+					<p class="nombre" id="numberwin">14</p>
 				</div>
 				<div class="grisinfo">
 					<h5>TIES</h5>
-					<p class="nombre">32</p>
+					<p class="nombre" id="numbertie">32</p>
 				</div>
 				<div class="yellowinfo">
-					<h5>O (CPU)</h5>
-					<p class="nombre">11</p>
+					<h5>O</h5>
+					<p class="nombre" id="numberlose">11</p>
 				</div>
 			</section>
 		</main>
